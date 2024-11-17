@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "webcam-ocr"
+version = "0.1.0"
+description = "A Python package that provides a webcam-based GUI for real-time handwriting OCR. Capture and transcribe handwritten text directly from your webcam with support for various content types and specialized recognition."
+authors = ["sjvrensburg <stefanj@mandela.ac.za>"]
+readme = "README.md"
+
+packages = [{include = "webcam_ocr", from = "src"}]
+include = ["py.typed"]
+
+[tool.poetry.dependencies]
+python = ">=3.12.1,<4.0"
+handwriting-ocr = {git = "https://github.com/sjvrensburg/handwriting_ocr.git"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+isort = "^5.12.0"
+mypy = "^1.5.0"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.scripts]
+webcam-ocr = "webcam_ocr.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
