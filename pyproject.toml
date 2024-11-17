@@ -4,9 +4,20 @@ version = "0.1.0"
 description = "A Python package that provides a webcam-based GUI for real-time handwriting OCR. Capture and transcribe handwritten text directly from your webcam with support for various content types and specialized recognition."
 authors = ["sjvrensburg <stefanj@mandela.ac.za>"]
 readme = "README.md"
-
 packages = [{include = "webcam_ocr", from = "src"}]
 include = ["py.typed"]
+repository = "https://github.com/sjvrensburg/webcam-ocr"
+keywords = ["ocr", "webcam", "computer-vision", "handwriting", "gui"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications",
+    "Intended Audience :: Education",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video :: Capture",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
 
 [tool.poetry.dependencies]
 python = ">=3.12.1,<4.0"
